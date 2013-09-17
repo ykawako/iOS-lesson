@@ -16,17 +16,12 @@
 		6612B41417D55F9C000A77BC /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6612B41317D55F9C000A77BC /* Default.png */; };
 		6612B41617D55F9C000A77BC /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6612B41517D55F9C000A77BC /* Default@2x.png */; };
 		6612B41B17D55F9C000A77BC /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6612B41917D55F9C000A77BC /* MainStoryboard.storyboard */; };
-		6612B41E17D55F9C000A77BC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6612B41D17D55F9C000A77BC /* ViewController.m */; };
-		66398B2317D8786A0056A484 /* cale.png in Resources */ = {isa = PBXBuildFile; fileRef = 66398B2017D878690056A484 /* cale.png */; };
-		66398B2417D8786A0056A484 /* map.png in Resources */ = {isa = PBXBuildFile; fileRef = 66398B2117D878690056A484 /* map.png */; };
-		66398B2517D8786A0056A484 /* time.png in Resources */ = {isa = PBXBuildFile; fileRef = 66398B2217D878690056A484 /* time.png */; };
-		66398B2717D878B80056A484 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 66398B2617D878B80056A484 /* Default-568h@2x.png */; };
-		668E161917D7296300B5BF88 /* CalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 668E161817D7296300B5BF88 /* CalViewController.m */; };
+		663E614717DEAEE300E63E70 /* DaysViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 663E614617DEAEE300E63E70 /* DaysViewController.m */; };
 		66BA710517D5768600A0600C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66BA710417D5768600A0600C /* MapKit.framework */; };
 		66BA710717D5769100A0600C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66BA710617D5769100A0600C /* CoreLocation.framework */; };
 		66DB08F017D59F8F000CC819 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66DB08EF17D59F8F000CC819 /* MapViewController.m */; };
 		66DB08F917D5A0E9000CC819 /* TimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66DB08F817D5A0E9000CC819 /* TimeViewController.m */; };
-		66E03DB617D8730300A2017B /* Default-568@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 66E03DB517D8730300A2017B /* Default-568@2x.png */; };
+		66E03DB617D8730300A2017B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 66E03DB517D8730300A2017B /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,21 +38,15 @@
 		6612B41317D55F9C000A77BC /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		6612B41517D55F9C000A77BC /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		6612B41A17D55F9C000A77BC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		6612B41C17D55F9C000A77BC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6612B41D17D55F9C000A77BC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		66398B2017D878690056A484 /* cale.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cale.png; sourceTree = "<group>"; };
-		66398B2117D878690056A484 /* map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map.png; sourceTree = "<group>"; };
-		66398B2217D878690056A484 /* time.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = time.png; sourceTree = "<group>"; };
-		66398B2617D878B80056A484 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		668E161717D7296300B5BF88 /* CalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalViewController.h; sourceTree = "<group>"; };
-		668E161817D7296300B5BF88 /* CalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalViewController.m; sourceTree = "<group>"; };
+		663E614517DEAEE200E63E70 /* DaysViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaysViewController.h; sourceTree = "<group>"; };
+		663E614617DEAEE300E63E70 /* DaysViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaysViewController.m; sourceTree = "<group>"; };
 		66BA710417D5768600A0600C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		66BA710617D5769100A0600C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		66DB08EE17D59F8F000CC819 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		66DB08EF17D59F8F000CC819 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		66DB08F717D5A0E9000CC819 /* TimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeViewController.h; sourceTree = "<group>"; };
 		66DB08F817D5A0E9000CC819 /* TimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeViewController.m; sourceTree = "<group>"; };
-		66E03DB517D8730300A2017B /* Default-568@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568@2x.png"; sourceTree = "<group>"; };
+		66E03DB517D8730300A2017B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +68,6 @@
 		6612B3F517D55F9C000A77BC = {
 			isa = PBXGroup;
 			children = (
-				66398B2617D878B80056A484 /* Default-568h@2x.png */,
 				6612B40717D55F9C000A77BC /* iOS_kaya */,
 				6612B40017D55F9C000A77BC /* Frameworks */,
 				6612B3FF17D55F9C000A77BC /* Products */,
@@ -114,12 +102,10 @@
 				6612B41917D55F9C000A77BC /* MainStoryboard.storyboard */,
 				66DB08F717D5A0E9000CC819 /* TimeViewController.h */,
 				66DB08F817D5A0E9000CC819 /* TimeViewController.m */,
-				668E161717D7296300B5BF88 /* CalViewController.h */,
-				668E161817D7296300B5BF88 /* CalViewController.m */,
+				663E614517DEAEE200E63E70 /* DaysViewController.h */,
+				663E614617DEAEE300E63E70 /* DaysViewController.m */,
 				66DB08EE17D59F8F000CC819 /* MapViewController.h */,
 				66DB08EF17D59F8F000CC819 /* MapViewController.m */,
-				6612B41C17D55F9C000A77BC /* ViewController.h */,
-				6612B41D17D55F9C000A77BC /* ViewController.m */,
 				6612B40817D55F9C000A77BC /* Supporting Files */,
 			);
 			path = iOS_kaya;
@@ -128,10 +114,7 @@
 		6612B40817D55F9C000A77BC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				66398B2017D878690056A484 /* cale.png */,
-				66398B2117D878690056A484 /* map.png */,
-				66398B2217D878690056A484 /* time.png */,
-				66E03DB517D8730300A2017B /* Default-568@2x.png */,
+				66E03DB517D8730300A2017B /* Default-568h@2x.png */,
 				6612B40917D55F9C000A77BC /* 私の今を知る-Info.plist */,
 				6612B40A17D55F9C000A77BC /* InfoPlist.strings */,
 				6612B40D17D55F9C000A77BC /* main.m */,
@@ -197,11 +180,7 @@
 				6612B41417D55F9C000A77BC /* Default.png in Resources */,
 				6612B41617D55F9C000A77BC /* Default@2x.png in Resources */,
 				6612B41B17D55F9C000A77BC /* MainStoryboard.storyboard in Resources */,
-				66E03DB617D8730300A2017B /* Default-568@2x.png in Resources */,
-				66398B2317D8786A0056A484 /* cale.png in Resources */,
-				66398B2417D8786A0056A484 /* map.png in Resources */,
-				66398B2517D8786A0056A484 /* time.png in Resources */,
-				66398B2717D878B80056A484 /* Default-568h@2x.png in Resources */,
+				66E03DB617D8730300A2017B /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,10 +193,9 @@
 			files = (
 				6612B40E17D55F9C000A77BC /* main.m in Sources */,
 				6612B41217D55F9C000A77BC /* AppDelegate.m in Sources */,
-				6612B41E17D55F9C000A77BC /* ViewController.m in Sources */,
 				66DB08F017D59F8F000CC819 /* MapViewController.m in Sources */,
 				66DB08F917D5A0E9000CC819 /* TimeViewController.m in Sources */,
-				668E161917D7296300B5BF88 /* CalViewController.m in Sources */,
+				663E614717DEAEE300E63E70 /* DaysViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

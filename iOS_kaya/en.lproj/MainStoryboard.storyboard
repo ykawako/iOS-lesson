@@ -31,10 +31,10 @@
             </objects>
             <point key="canvasLocation" x="527" y="587"/>
         </scene>
-        <!--Cal View Controller - 何日？-->
+        <!--Days View Controller - 何日？-->
         <scene sceneID="xhs-N3-Jg6">
             <objects>
-                <tableViewController id="Nnh-Zc-0eR" customClass="CalViewController" sceneMemberID="viewController">
+                <tableViewController id="Nnh-Zc-0eR" customClass="DaysViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ewx-zf-ovD">
                         <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -86,7 +86,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="何時？" image="time.png" id="JLp-ft-xAJ"/>
                     <connections>
-                        <outlet property="timeLabel" destination="dCD-KC-sRW" id="12S-RC-nB0"/>
+                        <outlet property="timeLabel" destination="dCD-KC-sRW" id="R5b-x3-22A"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="45h-23-Ae7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -120,8 +120,8 @@
         <image name="time.png" width="35" height="35"/>
     </resources>
     <classes>
-        <class className="CalViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CalViewController.h"/>
+        <class className="DaysViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DaysViewController.h"/>
         </class>
         <class className="MapViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
