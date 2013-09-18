@@ -91,7 +91,6 @@
   willDisplayCell:(UITableViewCell *)cell
 forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //NSDate *now = [NSDate date];
     NSDate *now = self.today;
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSUInteger flags = NSDayCalendarUnit;
