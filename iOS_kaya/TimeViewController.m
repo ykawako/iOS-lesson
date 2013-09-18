@@ -20,9 +20,9 @@
 {
     [super viewDidLoad];
 
-     _timeFormat= [[NSDateFormatter alloc] init];
-    [_timeFormat setDateFormat:@"HH:mm:ss"];
-    [_timeFormat setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"JST"]];
+     self.timeFormat= [[NSDateFormatter alloc] init];
+    [self.timeFormat setDateFormat:@"HH:mm:ss"];
+    [self.timeFormat setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"JST"]];
 
     NSTimer *timer;
     timer = [NSTimer scheduledTimerWithTimeInterval:1.0f
@@ -33,19 +33,19 @@
              ];
     
     [self timerSet];
-    _timeLabel.text = _timerSetting;
+    self.timeLabel.text = self.timerSetting;
 }
 
 -(void)timerCall:timer
 {
     [self timerSet];
-    _timeLabel.text = _timerSetting;
+    self.timeLabel.text = self.timerSetting;
 }
 
 -(void)timerSet
 {
     NSDate *now = [NSDate date];
-    _timerSetting = [_timeFormat stringFromDate:now];
+    self.timerSetting = [self.timeFormat stringFromDate:now];
 }
 
 @end
