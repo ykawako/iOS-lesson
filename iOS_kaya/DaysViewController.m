@@ -17,31 +17,32 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    NSDate *now = [NSDate date];
-    self.today = now;
+    self.today = [NSDate date];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy/MM/"];
     [dateFormatter setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"JST"]];
     NSString *yearAndMonth = [dateFormatter stringFromDate:self.today];
+    
     NSCalendar *calendar = [NSCalendar currentCalendar];
+    
+    self.days = [NSMutableArray array];
+    NSArray *weeks = @[@"日", @"月", @"火", @"水", @"木", @"金", @"土"];
+    NSDateComponents *componentDate = [calendar components:NSYearCalendarUnit  |
+                                                           NSMonthCalendarUnit |
+                                                           NSDayCalendarUnit
+                                                  fromDate:self.today];
     NSInteger daysOfThisMonth = [calendar rangeOfUnit:NSDayCalendarUnit
                                                inUnit:NSMonthCalendarUnit
                                               forDate:self.today].length;
-
-    self.days = [NSMutableArray array];
-    for(int dayNum = 1; dayNum <= daysOfThisMonth; dayNum++){
-        NSDateComponents *comp = [calendar components:NSYearCalendarUnit |
-                                 NSMonthCalendarUnit |
-                                 NSDayCalendarUnit
-                                 fromDate:self.today];
-        [comp setDay:dayNum];
-        NSDate *date = [calendar dateFromComponents:comp];
-        comp = [calendar components:NSWeekdayCalendarUnit
-                            fromDate:date];
-        NSArray *weeks = @[@"日", @"月", @"火", @"水", @"木", @"金", @"土"];
-        NSString *day = [NSString stringWithFormat:@"%@%02d(%@)", yearAndMonth, dayNum, weeks[[comp weekday]-1]];
+    for(int dayNumber = 1; dayNumber <= daysOfThisMonth; dayNumber++){
+        [componentDate setDay:dayNumber];
+        NSDate *date = [calendar dateFromComponents:componentDate];
+        NSDateComponents *weekNumber = [calendar components:NSWeekdayCalendarUnit
+                                                   fromDate:date];
+        NSString *day = [NSString stringWithFormat:@"%@%02d(%@)", yearAndMonth, dayNumber, weeks[[weekNumber weekday]-1]];
         [self.days addObject:day];
     }
+    [self.days addObject:@""];
 }
 
 - (void)configCellForSelected:(UITableViewCell *)cell
@@ -65,11 +66,9 @@
     return [self.days count];
 }
 
-
-
 - (UITableViewCell *)tableView:tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *cellIdentifier = @"CellList";
+    NSString *cellIdentifier = @"CellList";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
@@ -78,10 +77,10 @@
     cell.textLabel.textColor = [UIColor blackColor];
     cell.backgroundColor = [UIColor whiteColor];
     
-    UIColor *redcolor = [UIColor colorWithRed:1.0 green:0.2 blue:0.2 alpha:1.0];
-    UIView *selectedBgView = [[UIView alloc] initWithFrame:cell.bounds];
-    selectedBgView.backgroundColor = redcolor;
-    cell.selectedBackgroundView = selectedBgView;
+    UIColor *redColor = [UIColor colorWithRed:1.0 green:0.2 blue:0.2 alpha:1.0];
+    UIView *selectedBackgroundView = [[UIView alloc] initWithFrame:cell.bounds];
+    selectedBackgroundView.backgroundColor = redColor;
+    cell.selectedBackgroundView = selectedBackgroundView;
     cell.textLabel.text = [NSString stringWithFormat:@"%@", [self.days objectAtIndex:indexPath.row]];
     
     return cell;
@@ -91,14 +90,10 @@
   willDisplayCell:(UITableViewCell *)cell
 forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSDate *now = self.today;
-    NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSUInteger flags = NSDayCalendarUnit;
-    NSDateComponents *comps = [calendar components:flags fromDate:now];
-    NSString *todayView = [NSString stringWithFormat : @"%d", comps.day-1];
-    UIView *todayBgView = [[UIView alloc] initWithFrame:cell.bounds];
-    todayBgView.backgroundColor = [UIColor greenColor];
-    if ( [todayView isEqualToString:[NSString stringWithFormat:@"%d", indexPath.row]] ) {
+    NSDateComponents *comps = [[NSCalendar currentCalendar] components:NSDayCalendarUnit fromDate:self.today];
+    UIView *todayBackgroundView = [[UIView alloc] initWithFrame:cell.bounds];
+    todayBackgroundView.backgroundColor = [UIColor greenColor];
+    if (comps.day-1 == indexPath.row) {
         UIColor *greenColor = [UIColor colorWithRed:0.0 green:0.8 blue:0.6 alpha:1.0];
         [cell setBackgroundColor:greenColor];
         cell.textLabel.textColor = [UIColor whiteColor];

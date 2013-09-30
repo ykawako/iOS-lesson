@@ -19,7 +19,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
      self.timeFormat= [[NSDateFormatter alloc] init];
     [self.timeFormat setDateFormat:@"HH:mm:ss"];
     [self.timeFormat setTimeZone:[NSTimeZone timeZoneWithAbbreviation:@"JST"]];
@@ -32,20 +31,15 @@
                                             repeats:YES
              ];
     
-    [self timerSet];
-    self.timeLabel.text = self.timerSetting;
+    [self timerCall:timer];
 }
 
 -(void)timerCall:timer
 {
-    [self timerSet];
+    NSDate *now = [NSDate date];
+    self.timerSetting = [self.timeFormat stringFromDate:now];
     self.timeLabel.text = self.timerSetting;
 }
 
--(void)timerSet
-{
-    NSDate *now = [NSDate date];
-    self.timerSetting = [self.timeFormat stringFromDate:now];
-}
 
 @end

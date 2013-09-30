@@ -6,12 +6,9 @@
 //  Copyright (c) 2013年 河原. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import <CoreLocation/CoreLocation.h>
 
 @interface MapViewController : UIViewController<UITabBarControllerDelegate, MKMapViewDelegate, CLLocationManagerDelegate>
-
-
 
 @end

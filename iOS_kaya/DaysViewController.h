@@ -6,8 +6,6 @@
 //  Copyright (c) 2013年 河原. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 @interface DaysViewController : UITableViewController
 
 @end

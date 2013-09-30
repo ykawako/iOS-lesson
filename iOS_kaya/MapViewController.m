@@ -9,10 +9,7 @@
 #import "MapViewController.h"
 
 @interface MapViewController ()
-
-
 @property(nonatomic) MKMapView *mapView;
-
 @end
 
 @implementation MapViewController
@@ -21,7 +18,7 @@
 {
     self.mapView = [[MKMapView alloc] initWithFrame:self.view.bounds];
     [self.mapView setUserTrackingMode:MKUserTrackingModeFollow];
-    self.mapView.showsUserLocation = YES;
+    [self.mapView setShowsUserLocation:YES];
     [self.view addSubview:self.mapView];
     [self.mapView.userLocation addObserver:self forKeyPath:@"location" options:0 context:NULL];
     [super viewWillAppear:animated];
@@ -33,12 +30,10 @@
                        context:(void *)context
 {
     self.mapView.centerCoordinate = self.mapView.userLocation.location.coordinate;
-    MKCoordinateSpan CoordinateSpan = MKCoordinateSpanMake(0.005, 0.005);
-    MKCoordinateRegion CoordinateRegion = MKCoordinateRegionMake(self.mapView.centerCoordinate, CoordinateSpan);
-    [self.mapView setRegion:CoordinateRegion animated:YES];
+    MKCoordinateSpan coordinateSpan = MKCoordinateSpanMake(0.005, 0.005);
+    MKCoordinateRegion coordinateRegion = MKCoordinateRegionMake(self.mapView.centerCoordinate, coordinateSpan);
+    [self.mapView setRegion:coordinateRegion animated:YES];
     [self.mapView.userLocation removeObserver:self forKeyPath:@"location"];
 }
-
-
 
 @end
