@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="IgN-Qu-US4">
+    <dependencies>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller - 何処？-->
+        <scene sceneID="5">
+            <objects>
+                <viewController id="2" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iPr-y7-iVy"/>
+                        <viewControllerLayoutGuide type="bottom" id="Kyc-wH-XKk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="QxH-jv-tSs">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QxH-jv-tSs" firstAttribute="top" secondItem="3" secondAttribute="top" id="3nI-td-9Y3"/>
+                            <constraint firstItem="QxH-jv-tSs" firstAttribute="leading" secondItem="3" secondAttribute="leading" id="6N7-bk-pDA"/>
+                            <constraint firstItem="QxH-jv-tSs" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" id="9tO-Z6-D8t"/>
+                            <constraint firstItem="QxH-jv-tSs" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" id="CV2-lE-Jo8"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="何処？" image="map.png" id="610-dF-ZUC"/>
+                    <connections>
+                        <outlet property="mapView" destination="QxH-jv-tSs" id="TYP-4i-Vg9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="527" y="587"/>
+        </scene>
+        <!--Days View Controller - 何日？-->
+        <scene sceneID="xhs-N3-Jg6">
+            <objects>
+                <tableViewController id="Nnh-Zc-0eR" customClass="DaysViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ewx-zf-ovD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="Nnh-Zc-0eR" id="UN9-CL-6BU"/>
+                            <outlet property="delegate" destination="Nnh-Zc-0eR" id="8S1-G2-TQk"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="何日？" image="cale.png" id="t8Y-9U-WYC"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f01-h8-CFx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="946" y="-409"/>
+        </scene>
+        <!--Time View Controller - 何時？-->
+        <scene sceneID="pAO-NW-TWo">
+            <objects>
+                <viewController id="XNj-Q9-YzM" customClass="TimeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="A7M-0r-zaJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="5io-6O-NSg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JrY-NT-r0O">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jf6-DO-zn9">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCD-KC-sRW">
+                                        <rect key="frame" x="20" y="232" width="280" height="105"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="105" id="X6T-Se-jAh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="50"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.80000000000000004" blue="0.40000000000000002" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="dCD-KC-sRW" firstAttribute="centerY" secondItem="Jf6-DO-zn9" secondAttribute="centerY" id="0Mn-p7-duG"/>
+                                    <constraint firstItem="dCD-KC-sRW" firstAttribute="leading" secondItem="Jf6-DO-zn9" secondAttribute="leading" constant="20" symbolic="YES" id="w6O-7c-ZET"/>
+                                    <constraint firstAttribute="trailing" secondItem="dCD-KC-sRW" secondAttribute="trailing" constant="20" symbolic="YES" id="ym0-HJ-SSY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Jf6-DO-zn9" firstAttribute="bottom" secondItem="JrY-NT-r0O" secondAttribute="bottom" id="9gX-wK-Mao"/>
+                            <constraint firstItem="Jf6-DO-zn9" firstAttribute="leading" secondItem="JrY-NT-r0O" secondAttribute="leading" id="CXf-gA-sNI"/>
+                            <constraint firstItem="Jf6-DO-zn9" firstAttribute="trailing" secondItem="JrY-NT-r0O" secondAttribute="trailing" id="ZoL-8U-XXe"/>
+                            <constraint firstItem="Jf6-DO-zn9" firstAttribute="top" secondItem="JrY-NT-r0O" secondAttribute="top" id="q7f-ad-7I2"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="何時？" image="time.png" id="JLp-ft-xAJ"/>
+                    <connections>
+                        <outlet property="timeLabel" destination="dCD-KC-sRW" id="R5b-x3-22A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="45h-23-Ae7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="978" y="400"/>
+        </scene>
+        <!--Tab Bar Controller - 私の今を知る-->
+        <scene sceneID="4An-PR-0o4">
+            <objects>
+                <tabBarController title="私の今を知る" id="IgN-Qu-US4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="tcj-Kv-chB">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Nnh-Zc-0eR" kind="relationship" relationship="viewControllers" id="nvL-ys-MDm"/>
+                        <segue destination="2" kind="relationship" relationship="viewControllers" id="nrL-Br-hAf"/>
+                        <segue destination="XNj-Q9-YzM" kind="relationship" relationship="viewControllers" id="f8e-4M-DDm"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OFL-k8-HcF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="110" y="-16"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cale.png" width="35" height="35"/>
+        <image name="map.png" width="35" height="35"/>
+        <image name="time.png" width="35" height="35"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

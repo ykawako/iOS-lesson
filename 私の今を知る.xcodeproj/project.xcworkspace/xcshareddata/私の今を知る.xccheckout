@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6ED44716-53E9-494D-96AF-C378488E95A0</string>
+	<key>IDESourceControlProjectName</key>
+	<string>私の今を知る</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C1850033-1867-42F9-AC9B-FAAD1249784E</key>
+		<string>https://github.com/ykawako/iOS-lesson.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>私の今を知る.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C1850033-1867-42F9-AC9B-FAAD1249784E</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ykawako/iOS-lesson.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C1850033-1867-42F9-AC9B-FAAD1249784E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C1850033-1867-42F9-AC9B-FAAD1249784E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>lesson_kaya</string>
+		</dict>
+	</array>
+</dict>
+</plist>
